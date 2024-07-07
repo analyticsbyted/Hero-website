@@ -1,0 +1,87 @@
+/* Services.css */
+
+.services-container {
+    max-width: 90%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 80px auto;
+    text-align: center;
+  }
+  
+  .services .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 0.8rem;
+  }
+  .services .row .box {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  .services .row .box:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    background: #eee;
+  }
+  .services .row .box i {
+    font-size: 40px;
+    color: #212ea0;
+  }
+  .services .row .box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  .services .row .box p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .btn.btn-services {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    background-color: var(--th-color);
+    color: #fff;
+    border: 2px solid #212ea0;
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.btn.btn-services:hover {
+    background-color: rgb(219, 216, 216);
+    color: #080808;
+    transform: scale(1.1);
+}
+
+/* -- media query -- */
+@media screen and (max-width: 1200px) {
+  .services-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn {
+    padding: 14px 22px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .services .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    gap: 0.8rem;
+  }
+  .btn.btn-services {
+    margin-bottom: 100px;
+  }
+
+}
+@media screen and (max-width: 700px) {
+  .services .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+    gap: 0.8rem;
+  }
+}
+

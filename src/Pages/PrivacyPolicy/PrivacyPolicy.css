@@ -1,0 +1,22 @@
+.privacy-policy-container {
+  width: 100%;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 20px auto; /* Center the container vertically and horizontally */
+  padding: 20px;
+}
+.privacy-policy-container h1 {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: var(--th-color);
+}
+
+.pp-title {
+  font-size: 2rem;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* Additional styling can be added as needed */

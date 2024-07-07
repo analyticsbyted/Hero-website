@@ -1,0 +1,168 @@
+/* Insights.css */
+
+/* Base styles */
+.insights-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.insights-container section {
+  margin-bottom: 3rem;
+}
+
+.insights-container h2 {
+  color: var(--th-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Card Styles */
+.insights-container .update-item,
+.insights-container .webinar-item,
+.insights-container .article-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  text-align: left; /* Adjusted to align text left */
+}
+
+.card-content {
+  flex-grow: 1; /* Allow text content to take up remaining space */
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column; /* Change flex-direction to column */
+  align-items: flex-start; /* Adjust alignment */
+  margin-bottom: 1rem; /* Adjust as needed for spacing */
+}
+
+.title-wrapper h4 {
+  margin-bottom: 0.5rem; /* Adjust as needed for spacing */
+}
+
+.author-date {
+  font-style: italic;
+  color: #666; /* Adjust color as needed */
+  margin-top: 0.5rem; /* Add margin to separate from title */
+}
+
+/* Image Styling */
+.card-image {
+  float: left;
+  max-width: 200px;
+  height: auto;
+  margin-right: 1.5rem;
+  object-fit: cover;
+}
+
+/* Button Styles */
+.read-more-button {
+  font-size: 0.8rem;
+}
+.insights-container .register-button {
+  background-color: #212ea0;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block; /* Make button take full width */
+  margin-top: 1rem; /* Add top margin for spacing */
+}
+
+/* Read More Link specific styling */
+.insights-container .read-more-button {
+  color: #212ea0; /* Blue link color */
+  text-decoration: none; /* Underline for links */
+  font-weight: 500; /* Slightly bolder font weight */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+  display: inline-block; /* To allow for margin/padding adjustments */
+  margin-top: 1rem; /* Add margin for better spacing */
+}
+
+.insights-container .read-more-button:hover,
+.insights-container .register-button:hover {
+  transform: scale(1.1); /* Darker shade on hover */
+}
+
+/* Reduce spacing between elements in the webinar section */
+.upcoming-webinars .webinar-item {
+  display: flex;
+  flex-direction: row; /* Ensure items are laid out in a row */
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.upcoming-webinars .card-content {
+  flex: 1; /* Allow content to grow as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-webinars .card-content .register-button {
+  align-self: flex-end; /* Align button to the bottom right */
+  margin-top: auto; /* Push button to the bottom */
+}
+
+.upcoming-webinars .card-content p {
+  margin-bottom: 0.5rem; /* Reduce bottom margin between paragraphs */
+}
+
+.webinar-image {
+  height: 200px;
+  width: auto;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .insights-container {
+    padding: 1rem;
+  }
+
+  .insights-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .insights-container .update-item,
+  .insights-container .webinar-item,
+  .insights-container .article-card {
+    padding: 1rem;
+  }
+
+  .card-image {
+    display: none; /* Hide image on small screens */
+  }
+}
+
+/* Media Query for Very Small Devices (up to 450px) */
+@media (max-width: 450px) {
+  .insights-container h2 {
+    font-size: 1.2rem; /* Adjust font size for very small screens */
+  }
+
+  .insights-container .card-image {
+    display: none; /* Hide images on very small screens */
+  }
+
+  .insights-container .register-button,
+  .insights-container .read-more-button {
+    width: 100%; /* Make buttons full width */
+    text-align: center; /* Center text in buttons */
+  }
+  .title-wrapper h4 {
+    font-size: 1rem;
+  }
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,221 @@
+/* Navbar.css */
+
+nav {
+    width: 100%;
+    background: black; /* Always dark background */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #797979;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11;
+    transition:  all 0.5s ease;
+  }
+.navbar-container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.navbar-container .logo-section {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.navbar-container .logo-section h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #212ea0;
+  font-weight: 900;
+  font-size: 24px;
+}
+.logo-section h2 span {
+  color: black;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  
+  nav ul li {
+    list-style: none;
+    margin: 5px 15px;
+    font-size: 14px;
+  }
+  
+  nav ul li a {
+    color: #fefefe;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s; /* Add transition for smooth hover effect */
+  }
+  
+  nav ul li a:hover {
+    color: #cdcdd5; /* Change color on hover */
+  }
+  
+/* Style for active link */
+nav .nav-links a.active, 
+nav .nav-links .active {
+    color: #a1aaf5; /* Change color for active link */
+}
+  
+nav ul li .navbtn {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #fff;
+    background: var(--th-color);
+    transition: all 0.3s ease;
+ }
+  
+  nav ul li .navbtn:hover {
+    color: #fefefe;
+  }
+  
+  .dark-nav {
+    background: black;
+    transition: 0.5s;
+  }
+  
+  .dark-green-nav {
+    background: rgb(37, 6, 6);
+    transition: 0.5s;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    z-index: 11;
+  }
+
+.logo {
+    width: 40px; /* Adjust width as needed */
+    margin-right: 5px;
+  }
+  
+  .mobile-logo {
+    display: block;
+    max-width: 250px; /* Adjust as needed */
+    margin: 0 auto; /* Center the logo */
+    margin-top: 2rem;
+  }
+
+  /* New CSS for specific paths */
+  body.login-page nav,
+  body.register-page nav {
+    background: #212ea0;
+  }
+  
+  /* -- media query -- */
+  @media screen and (max-width: 1200px) {
+    .navbar-container {
+      padding-left: 5%;
+      padding-right: 5% !important;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .logo {
+        width: 40px;
+      }
+    
+    .navbar-container .logo-section h2 {
+      font-size: 20px;
+    }
+    nav ul li {
+      margin: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 940px) {
+    nav ul li {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (min-width: 860px) {
+    .mobile-logo {
+      display: none; /* Hide the mobile logo on larger screens */
+    }
+  }
+  
+  @media screen and (max-width: 860px) {
+    nav {
+      padding: 15px 0;
+    }
+    .logo-section {
+      justify-content: space-between;
+    }
+
+    nav ul .nav-links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: all 0.5s ease;
+    }
+    
+    nav ul li {
+      display: block;
+      margin: 25px auto;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu-icon {
+      display: block;
+      width: 30px;
+      cursor: pointer;
+    }
+    .hide-mobile-menu {
+      right: -200px;
+      transition: 0.5s ease;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .nav-links {
+      display: none;
+  }
+
+  .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; /* Position below the navbar */
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #111111; /* Match navbar background */
+      z-index: 10; /* Ensure menu is above other content */
+      transition: right 0.5s ease;
+  }
+  nav ul.nav-links.open {
+    padding-top: 20px; /* Adjust vertical spacing from the top */
+  }
+
+  .nav-links li {
+    font-size: 14px;
+      width: 100%;
+      text-align: center;
+      margin: 1rem 0;
+  }
+  .nav-links li a {
+    transition: color 0.3s; /* Add transition for smooth hover effect */
+  }
+  .nav-links li a:hover {
+    color: var(--th-color);
+  }
+}
+
+  

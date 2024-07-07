@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /admin/*   # Block crawling of admin pages
+Disallow: /api/*     # Block crawling of API endpoints

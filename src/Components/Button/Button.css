@@ -1,0 +1,37 @@
+/* Button.css */
+.btn-gradient-wrapper {
+    /* Styles for the outer wrapper */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-btn { /* Renamed btn class */
+    /* Base button styles */
+    padding: 0.5rem 1rem; 
+    font-weight: 600;
+    font-size: 14px; 
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    background: transparent;
+    /* Additional styles for the button */
+    background-color: #3d4bca;  /* Light green */
+    color: #fff;
+  }
+  
+  .custom-btn.btn-white { /* Updated to use custom-btn prefix */
+    /* White button styles */
+    background-color: white;
+    color: black;
+    box-shadow:  0px 0px 0px 4px #808080 inset; /* Simulated border using box-shadow */
+  }
+  
+  .custom-btn:hover {
+    /* Hover styles for all buttons */
+    transform: scale(1.1) !important;
+    background-color: #253af2 !important;
+  }
+  

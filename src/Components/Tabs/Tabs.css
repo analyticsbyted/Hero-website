@@ -1,0 +1,32 @@
+/* Tabs.css */
+.tabs-container {
+    /* Style the overall tabs container */
+    width: 90%;
+  }
+  
+  .tabs-list {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd; /* Add a bottom border to the tab container */
+    justify-content: center;
+  }
+  
+  .tab-item {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; /* Default border */
+    flex: 1; /* Distribute space evenly among tabs */
+    max-width: 200px;
+    text-align: center; /* Center text within each tab */
+  }
+  
+  .tab-item.active {
+    border-bottom: 2px solid #212ea0; /* Color to match your theme */
+  }
+  
+  .tab-content {
+    padding: 1rem;
+  }
+  

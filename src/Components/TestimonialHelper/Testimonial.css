@@ -1,0 +1,35 @@
+.slide {
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    padding: 40px;
+    border-radius: 10px;
+    color: #676767;
+    line-height: 1.4;
+}
+
+.slide img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid #212ea0;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.user-info h3 {
+    color: #212ea0;
+}
+.no-image-placeholder {
+    width: 65px;      /* Match the image width */
+    height: 65px;     /* Match the image height */
+    background-color: #f0f0f0; /* Light gray background (or your preference) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;  /* Adjust as needed */
+    color: #666;      /* Adjust as needed */
+    border: 3px solid #212ea0;
+  }

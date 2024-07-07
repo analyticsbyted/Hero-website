@@ -1,0 +1,98 @@
+/* About.css (Revised) */
+.about-us {
+    margin-top: 80px;
+    padding: 2rem;
+  }
+  
+  .about-container {
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;    /* Center the container */
+  }
+  
+  .about-intro {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .about-intro h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #212ea0;
+  }
+  
+  .about-intro h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team {
+    text-align: center;
+    margin-bottom: 1rem; /* Add margin below the "Meet the Team" header */
+  }
+.team h2 {
+    margin-bottom: 1rem;
+}
+
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    width: 48%; /* Adjust width as needed for two cards */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+  }
+  .team-member img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid #212ea0;
+  }
+
+  .team-member .title {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta {  
+    text-align: center;
+  }
+  
+  .cta h2 { /* Style the CTA heading */
+    margin-bottom: 1rem;  /* Add margin below the CTA heading */
+    color: #212ea0;
+  }
+  
+  .cta p {
+    margin-bottom: 2rem;  /* Add margin below the CTA paragraph */
+  }
+  
+  .cta button { /* Target the button inside the CTA section */
+    margin-bottom: 3rem;  /* Add margin below the CTA button */
+  }
+  
+  /* Add a media query for smaller screens */
+  @media (max-width: 768px) {
+      .about-intro h1 {
+        font-size: 3rem;
+      }
+      .about-intro h2 {
+        font-size: 2rem;
+      }
+      .team-members {
+          flex-direction: column; /* Stack cards vertically on small screens */
+          align-items: center;
+      }
+      .team-member {
+          width: 80%; /* Adjust width for stacked layout */
+      }
+  }
+  

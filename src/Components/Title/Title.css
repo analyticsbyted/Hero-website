@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+  color: #212ea0;
+  font-size: 15px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 120px;
+  margin-bottom: -10px !important;
+  background-color: var(--title-bg-color);
+}
+.title h2 {
+  font-size: 32px;
+  color: #000f38;
+  margin-top: 10px;
+  text-transform: none;
+}
+
+@media screen and (max-width: 450px) {
+  .title h2 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,164 @@
+/* Contact.css */
+
+.contact {
+  margin: 40px auto;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-col {
+  flex-basis: 48%;
+  color: #676767;
+}
+/* Mobile logo container */
+.logo-container {
+  text-align: center; /* Center the logo */
+  margin-top: 1rem; /* Add some space above the logo */
+}
+
+.contact-logo {
+  max-width: 50%; /* Make logo responsive */
+  height: auto; /* Maintain aspect ratio */
+  background: var(--th-color);
+  border-radius: 10px;
+}
+
+.contact-col:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align contents vertically and horizontally */
+  text-align: center; /* Center-align text */
+}
+
+.contact-col h3 {
+  color: #000f38;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-col p {
+  max-width: 450px;
+  line-height: 1.3;
+}
+/* Style the second column (form) to span rows as needed */
+.contact-col:last-child {
+  grid-row: span 2; /* Allow the form to span 2 rows if necessary */
+  overflow-y: auto; /* Add a vertical scrollbar if the form content is too long */
+  max-height: 100%; /* Ensure the form doesn't exceed the container's height */
+}
+
+.contact-col:first-child ul {
+  padding-left: 0; /* Remove default padding */
+  text-align: left; /* Align the text content to the left */
+}
+
+.contact-col ul {
+  padding-left: 0; /* Remove default padding */
+  display: flex;
+  flex-direction: column; /* Display list items in a column */
+}
+
+.contact-col ul li {
+  display: flex;
+  align-items: flex-start; /* Align items vertically at the top */
+  margin-bottom: 20px;
+}
+
+.contact-col ul li .icon {
+  font-size: 24px; /* Adjust the size as needed */
+  color: var(--th-color); /* Adjust the color as needed */
+  margin-right: 10px; /* Adjust spacing between icon and text */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.icon-header {
+  font-size: 24px;
+  color: var(--th-color);
+  margin-left: 5px;
+}
+
+.icon {
+  font-size: 24px; /* Adjust the size as needed */
+  color: var(--th-color); /* Adjust the color as needed */
+}
+
+.contact form input,
+.contact form textarea,
+.phone-input {
+  display: block;
+  width: 100%;
+  max-width: 600px; /* Limit max-width of input fields */
+  background: #ebecfe;
+  padding: 5px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  resize: none;
+}
+
+.contact form label {
+  font-weight: 700;
+}
+.form-result {
+  display: block; /* Ensure the span takes up the full width */
+  margin-top: 20px; /* Adjust this value as needed */
+  font-weight: bold;
+  color: green; /* Optional: You can add styling for the message */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 750px) {
+  .contact {
+    display: block;
+  }
+  .contact-col {
+    padding: 10px;
+  }
+  .contact-col h3 {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Placeholder text styling */
+.contact form input::placeholder,
+.contact form textarea::placeholder,
+.phone-input::placeholder {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+}
+
+@media screen and (max-width: 450px) {
+  .contact-col h3 {
+    font-size: 20px;
+  }
+  .contact-col p {
+    font-size: 16px;
+  }
+  .icon {
+    font-size: 18px; /* Adjust the size as needed */
+    color: var(--th-color); /* Adjust the color as needed */
+    margin-right: 5px;
+  }
+  .contact form input::placeholder,
+  .contact form textarea::placeholder,
+  .phone-input::placeholder {
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+  }
+}

@@ -1,0 +1,73 @@
+/* src/Pages/AdminDash/Contacts.css */
+
+.contacts-container {
+    padding: 20px;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .centered-title {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  .contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .contacts-table th,
+  .contacts-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .contacts-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .contacts-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .contacts-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  .pagination {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination button {
+    border: none;
+    background-color: transparent;
+    color: #007bff; /* Default color for page numbers */
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .pagination button:hover {
+    text-decoration: underline;
+  }
+  
+  .pagination button.active {
+    font-weight: bold; /* Make the active page number bold */
+    color: #000; /* Darken the color of the active page number */
+  }
+  
+  
