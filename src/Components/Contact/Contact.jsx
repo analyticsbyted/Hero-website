@@ -65,7 +65,7 @@ const Contact = () => {
 
     // Format the phone number
     const phoneNumber = parsePhoneNumberFromString(phone);
-    const formattedPhone = phoneNumber
+    const formattedPhone = phoneNumberbui
       ? phoneNumber.formatInternational()
       : phone;
 
