@@ -14,9 +14,9 @@ npm run lint     # ESLint
 
 **Prerequisites:** Node.js `^20.19.0` or `>=22.12.0` (required by Vite 7).
 
-## Known Issue — Not Yet Fixed
+## Admin Analytics
 
-See [`SECURITY_NOTE_admin_analytics.md`](./SECURITY_NOTE_admin_analytics.md): `src/Pages/AdminDash/Analytics.jsx` currently imports Google's server-only `BetaAnalyticsDataClient` directly into client-rendered React code and reads a GA4 service-account credentials JSON via `import.meta.env.VITE_GOOGLE_APPLICATION_CREDENTIALS`. If real values are ever wired into a production build, that credentials JSON ships to every visitor's browser bundle. **Do not set real values for that env var until this is moved behind a backend endpoint** (see the note for the proposed fix).
+`src/Pages/AdminDash/Analytics.jsx` no longer holds any Google credentials. It POSTs `{ startDate, endDate, metric }` to the URL in `VITE_ANALYTICS_API_URL` and expects a GA4 `runReport`-shaped JSON response. That backend endpoint does not exist yet. When building it, keep the service-account key in a server-only secret, never a `VITE_*` variable, and require admin auth on the route. See [`SECURITY_NOTE_admin_analytics.md`](./SECURITY_NOTE_admin_analytics.md) for history.
 
 ## Maintenance Log
 

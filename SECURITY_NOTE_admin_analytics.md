@@ -1,6 +1,6 @@
 # Security Note: Admin Analytics ships credentials to the browser
 
-**Status:** Open — needs a design fix, not a dependency patch.
+**Status:** Resolved. The client no longer imports `@google-analytics/data` or reads `VITE_GOOGLE_APPLICATION_CREDENTIALS`; the dependency was removed. The backend endpoint is still to be built (see README). The text below describes the original issue.
 **Where:** `src/Pages/AdminDash/Analytics.jsx` (routed at `/admin/*` via `src/App.jsx`, behind `featureFlags.showAdminLink`).
 **Severity:** High — if ever deployed with real values, a GA4 service-account credentials file is exposed to every visitor of the built site.
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
-import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import "./Analytics.css";
 
 function Analytics() {
@@ -13,29 +12,20 @@ function Analytics() {
   useEffect(() => {
     const fetchAnalyticsData = async () => {
       try {
-        const propertyId = import.meta.env.VITE_GA4_PROPERTY_ID;
-        const credentials = JSON.parse(
-          import.meta.env.VITE_GOOGLE_APPLICATION_CREDENTIALS
-        );
-
-        if (!propertyId || !credentials) {
-          throw new Error("Missing credentials or property ID");
+        // Credentials live server-side only; the backend runs the GA4 report.
+        const endpoint = import.meta.env.VITE_ANALYTICS_API_URL;
+        if (!endpoint) {
+          throw new Error("VITE_ANALYTICS_API_URL is not configured");
         }
 
-        const analyticsDataClient = new BetaAnalyticsDataClient({ credentials });
-
-        const [response] = await analyticsDataClient.runReport({
-          property: `properties/${propertyId}`,
-          dateRanges: [{ startDate, endDate }],
-          dimensions: [
-            { name: "pagePath" },
-            { name: "pageTitle" },
-          ],
-          metrics: [
-            { name: selectedMetric },
-            { name: "screenPageViews" },
-          ],
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ startDate, endDate, metric: selectedMetric }),
         });
+        if (!res.ok) throw new Error(`Analytics API returned ${res.status}`);
+        const response = await res.json();
 
         const formattedData = formatDataForChart(response, chartType);
         setChartData(formattedData);
